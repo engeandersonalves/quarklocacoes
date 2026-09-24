@@ -31,7 +31,7 @@ Todos os preços podem ser editados item a item. Os preços do catálogo inicial
 
 ## Usar agora (modo demonstração)
 ```bash
-cd locacoes
+git clone https://github.com/engeandersonalves/quarklocacoes && cd quarklocacoes
 npm install
 npm run dev        # http://localhost:3000
 ```
@@ -39,7 +39,7 @@ Sem configurar nada, os dados ficam salvos **só no navegador** — bom para tes
 
 ## Colocar no ar (≈ 10 minutos, plano gratuito)
 1. **Supabase** — crie um projeto em [supabase.com](https://supabase.com). Em **SQL Editor → New query**, cole [`supabase/schema.sql`](supabase/schema.sql) e clique em **Run**. Em **Project Settings → API**, copie a *Project URL* e a chave *anon*.
-2. **Vercel** — importe o repositório em [vercel.com/new](https://vercel.com/new) e, em **Root Directory**, escolha **`locacoes`**. Em *Environment Variables* cadastre as variáveis de [`.env.example`](.env.example). Clique em Deploy.
+2. **Vercel** — importe o repositório **quarklocacoes** em [vercel.com/new](https://vercel.com/new) (a Vercel já reconhece o Next.js, não precisa mudar nada). Em *Environment Variables* cadastre as variáveis de [`.env.example`](.env.example). Clique em Deploy.
 3. Abra o app e **crie a sua conta primeiro** — a primeira pessoa a entrar vira administradora. Depois, em **Ajustes → Equipe**, libere o e-mail de cada funcionário; só e-mails liberados conseguem ver os dados (clientes, CPFs, endereços). Quando todos tiverem conta, defina `NEXT_PUBLIC_ALLOW_SIGNUP=false` e, no Supabase, desative *Allow new users to sign up* em **Authentication → Sign In / Providers**.
 4. Tinha dados no modo demonstração? Em **Ajustes → Baixar backup** no navegador antigo e **Importar backup** no app publicado.
 
